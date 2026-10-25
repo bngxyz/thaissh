@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ThaiSSH</string>
+    <string name="title_activity_main">ThaiSSH</string>
+    <string name="package_name">com.thaissh.web</string>
+    <string name="custom_url_scheme">com.thaissh.web</string>
+</resources>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ThaiSSH</title>
+    <style>
+      html, body { height: 100%; margin: 0; }
+      body {
+        background: #0b0c11; color: #a2a8c0;
+        font-family: system-ui, "Noto Sans Thai", sans-serif; font-size: 14px;
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+      }
+      svg { filter: drop-shadow(0 10px 30px #8b7cf866); }
+      .bar { width: 120px; height: 3px; border-radius: 3px; background: #1b1f2c; overflow: hidden; }
+      .bar::after { content: ""; display: block; width: 40%; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #a78bfa, #5eead4); animation: slide 1s ease-in-out infinite alternate; }
+      @keyframes slide { to { transform: translateX(150%); } }
+      #status { max-width: 80%; text-align: center; }
+      body.error .bar { display: none; }
+      body.error #status { color: #f7768e; }
+    </style>
+  </head>
+  <body>
+    <svg width="64" height="64" viewBox="0 0 32 32" aria-hidden="true">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa" /><stop offset="1" stop-color="#5eead4" /></linearGradient></defs>
+      <rect width="32" height="32" rx="9" fill="url(#g)" />
+      <path d="M9 11.5 14 16l-5 4.5M16.5 21h6.5" fill="none" stroke="#0b0c11" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <div class="bar"></div>
+    <div id="status">กำลังเริ่ม ThaiSSH…</div>
+    <script src="boot.js"></script>
+  </body>
+</html>
